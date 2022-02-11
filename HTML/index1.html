@@ -9,22 +9,22 @@
 </head>
 
 <body>
-    <h1>Приклад <i>елементів в  HTML </i></h1>
+    <h1>Приклад <i>елементів в HTML</i></h1>
     <!-- це коментар -->
     <h2>робота з текстом</h2>
     <h3>Перший абзац</h3>
-    <p> <strong>Lorem ipsum </strong> dolor sit, amet consectetur adipisicing elit. Tenetur sapiente numquam, aut deleniti, illum reiciendis voluptas nam, rem ut eos quisquam omnis. Placeat, quia a aspernatur blanditiis distinctio modi quaerat!</p>
+    <p> <strong>Lorem ipsum</strong> dolor sit, amet consectetur adipisicing elit. Tenetur sapiente numquam, aut deleniti, illum reiciendis voluptas nam, rem ut eos quisquam omnis. Placeat, quia a aspernatur blanditiis distinctio modi quaerat!</p>
     <h3>Другий абзац</h3>
     <p>
-        <b> Lorem ipsum </b>dolor sit, amet consectetur adipisicing elit. Ducimus consequatur eos quasi optio ex adipisci, totam veniam voluptate aspernatur ab numquam excepturi suscipit, rations
+        <b>Lorem ipsum</b> dolor sit, amet consectetur adipisicing elit. Ducimus consequatur eos quasi optio ex adipisci, totam veniam voluptate aspernatur ab numquam excepturi suscipit, rations
     </p>
-    <h6>br </h6>
+    <h6> розрив рядка br </h6>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. A cumque quidem tempore eius, recusandae cum harum est doloremque, quis perferendis, nam saepe officiis pariatur ullam? <br> Possimus iure deserunt praesentium perferendis?
     <h5>індекси</h5>
     H<sub>2</sub>0 , y=x<sup>3+x</sup>
 
     <h2> Списки </h2>
-    <h3> нумерований </h3>
+    <h3> Нумерований </h3>
     <ol>
         <li>Україна</li>
         <li>США</li>
@@ -37,7 +37,7 @@
         <li>Екзамен</li>
         Курсова робота
     </ul>
-    <h3> Багаторывневий </h3>
+    <h3> Багаторівневий </h3>
     <ol>
         <li>
             група 1
@@ -55,7 +55,152 @@
             </ol>
         </li>
     </ol>
-    </h3>
-</body>
+    <h2>Зображення</h2>
+    <img width="100" height="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Felis_silvestris_silvestris.jpg/330px-Felis_silvestris_silvestris.jpg" alt="кіт">
+    <h2>Посилання</h2>
+    <a href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D1%82">
+        Про кота
+    </a>
+    <a href="author.html" id="authorref">Про автора</a>
+    <a href="https://uk.wikipedia.org/wiki/%D0%9A%D1%96%D1%82">
+        <img width="100" height="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Felis_silvestris_silvestris.jpg/330px-Felis_silvestris_silvestris.jpg" alt="кіт">
+    </a> 
 
+    <ol>
+        <li><a href="#"><img width="20" height="20" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Felis_silvestris_silvestris.jpg/330px-Felis_silvestris_silvestris.jpg" alt="кіт">один</a></li>
+        <li><a href="#">два</a></li>
+    </ol>-->
+
+    <h2>Таблиці</h2>
+    <table border="1">
+        <tr>
+            <td>1</td>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem veritatis iusto saepe adipisci laboriosam corrupti impedit, modi velit libero ducimus possimus quaerat vel nisi excepturi, mollitia sunt non aliquid doloribus!</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+    </table>
+
+    <table border="1">
+            <caption>
+                табл. 1
+            </caption>
+        <tr>
+            <th>№</th>
+            <th >Ім'я</th>
+            <th>Курс</th>
+            <th>Спеціальність</th>
+            <th>Степендія</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td rowspan="2">5</td>
+        </tr>
+        <tr>
+            <td colspan="3">1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <h2>
+       не семантична верстка
+    </h2>
+    <div id="header">
+        <div id="logo"><img src="#" alt="logo"></div>
+        <div class="nav">
+            <ul id="nav">
+                <li>Меню1</li>
+                <li>меню2</li>
+                <li>меню3</li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div id="content">
+            <div class="article">
+                <h2>Стаття 1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fuga eaque eligendi. Velit, vero dolorum. Officiis perferendis labore voluptatem, amet ipsam dolorum earum ex commodi magni adipisci provident blanditiis corporis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fuga eaque eligendi. Velit, vero dolorum. Officiis perferendis labore voluptatem, amet ipsam dolorum earum ex commodi magni adipisci provident blanditiis corporis.
+                </p>
+            </div>
+            <div class="article">
+                <h2>Стаття 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fuga eaque eligendi. Velit, vero dolorum. Officiis perferendis labore voluptatem, amet ipsam dolorum earum ex commodi magni adipisci provident blanditiis corporis.
+                </p>
+            </div>
+        </div>
+        <div class="aside">
+            <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>
+    </div>
+    <div id="footer">
+        Про автора <b></b>
+    </div>
+
+    <h2>
+        семантична верстка
+     </h2>
+     <header>
+         <div id="logo"><img src="#" alt="logo"></div>
+         <nav>
+            <ul id="nav">
+                <li>Меню1</li>
+                <li>меню2</li>
+                <li>меню3</li>
+            </ul>
+        </nav>
+     </header>
+     <main>
+        <section id="content">
+            <article>
+                <h2>Стаття 1</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fuga eaque eligendi. Velit, vero dolorum. Officiis perferendis labore voluptatem, amet ipsam dolorum earum ex commodi magni adipisci provident blanditiis corporis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fuga eaque eligendi. Velit, vero dolorum. Officiis perferendis labore voluptatem, amet ipsam dolorum earum ex commodi magni adipisci provident blanditiis corporis.
+                </p>
+            </article>
+            <article>
+                <h2>Стаття 2</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et fuga eaque eligendi. Velit, vero dolorum. Officiis perferendis labore voluptatem, amet ipsam dolorum earum ex commodi magni adipisci provident blanditiis corporis.
+                </p>
+            </article>
+    
+        </section>
+        <aside>
+            <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </aside>
+    </main>
+    <footer>
+        Про автора <b></b>
+    </footer>
+</body>
 </html>
