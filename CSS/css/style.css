@@ -1,0 +1,50 @@
+p{
+ font-weight: 800;   
+}
+
+.second{
+    border: 1px solid black;
+}
+
+.right-align{
+    text-align: right;
+    border: 1px solid green;
+}
+
+#maintitle{
+    text-align: center;
+}
+
+.second{
+    border: 1px solid red;
+}
+
+ul.second>li>a{
+    background-color: black;
+    color: aliceblue;
+}
+
+ul.second li a{
+    text-decoration: none;
+}
+
+li:nth-child(5n-1){
+    border: 1px dotted blue;
+}
+
+tr:nth-child(even){
+    background-color: cadetblue;
+}
+
+td:hover{
+    font-size: 2em;
+}
+
+
+li:nth-last-child(1){
+    border-bottom: 1px solid black;
+}
+
+p{
+    
+}
