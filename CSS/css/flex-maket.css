@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    background-color: aqua;
+    flex-grow: 1;
+}
+
+#menu{
+    background-color: yellowgreen;
+    flex-grow: 1;
+    
+}
+ul.menu{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#wrap{
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+#content{
+    display: flex;
+    flex: 1 1 auto;
+}
+aside{
+    flex-basis: 200px;
+    background-color: cadetblue;
+}
+main{
+    background-color: gray;
+}
+
+footer{
+    background-color: chartreuse;
+}
+article{
+    border: 1px solid black;
+    padding: 20px;
+}
