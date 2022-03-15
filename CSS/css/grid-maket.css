@@ -1,0 +1,25 @@
+#wrap{
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+}
+
+header{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+ul.menu{
+    display: grid;
+    grid-auto-columns: minmax(70px, auto);
+    grid-auto-flow: column;
+}
+
+#content{
+    display: grid;
+    grid-template-columns: 200px minmax(500px, auto);
+}
+
+main{
+    display: grid;
+    grid-auto-rows: minmax(100px, auto);
+}

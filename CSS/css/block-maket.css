@@ -35,17 +35,19 @@ header{
 
 main{
     background-color: gray;
-    margin-left: 200px;
+    left: 20%;
     position: absolute;
     height: 100%;
-    display: flex;
-    flex-direction: column;
+    width: 80%;
 }
 aside{
     background-color: cadetblue;
-    width: 200px;
+    width: 20%;
+    min-width: 160px;
     position: absolute;
     height: 100%;
+
+    padding: 20px;
 }
 #content{
     position: relative;
@@ -54,6 +56,7 @@ aside{
 
 #wrap{
     min-height: 700px;
+    min-width: 1000px;
     position: relative;
     width: 90%;
     margin: 0 auto;
@@ -68,4 +71,8 @@ footer{
 article{
     border: 1px solid black;
     padding: 20px;
+}
+
+h2{
+    display: inline;
 }

@@ -1,0 +1,67 @@
+.cell{
+    background-color: blueviolet;
+    color: aliceblue;
+    border: 1px solid yellowgreen;
+    font-size: 50px;
+}
+
+/*явна сітка*/
+.grid{
+    display: grid;
+    grid-template-rows: 100px 200px 50px;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 33% 67%;
+    grid-template-columns: 1fr 2fr 3fr 4fr;
+    grid-template-columns: minmax(100px, 300px) minmax(200px, 1fr) minmax(100px, 300px);
+    grid-template-rows: repeat(5, minmax(100px, 1fr) minmax(100px, 2fr));
+    grid-template:  repeat(3, minmax(100px, 1fr) minmax(100px, 2fr)) / 1fr 2fr 1fr ;
+
+    /* justify-items: center;
+    align-items: end; */
+    grid-template: repeat(3,minmax(200px, auto)) / 100px 200px 100px;
+    justify-content: space-between;
+    align-content: center;
+    height: 800px;
+}
+
+/*сітказ областями*/
+.grid-area{
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "aside main"
+    "aside content"
+    "footer footer";
+    grid-template-columns: minmax(200px, 300px) minmax(500px, 1fr);
+}
+
+.cell-area:nth-child(1){
+    grid-area: header;
+}
+
+.cell-area:nth-child(2){
+    grid-area: aside;
+}
+.cell-area:nth-child(3){
+    grid-area: main;
+}
+
+.cell-area:nth-child(4){
+    grid-area: content;
+}
+
+.cell-area:nth-child(5){
+    grid-area: footer;
+}
+
+.cell-area:nth-child(6){
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-column: 2 / 3;
+    grid-row-start: 5;
+    grid-row-end: 7;
+}
+
+.row{
+    grid-column: 2 / 4;
+}
