@@ -1,0 +1,89 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.rectangle{
+    width: 100%;
+    min-height: 300px;
+    background-color: aqua;
+    font-size: 200%;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 1000px) {
+    .ex1{
+        font-size: 400%;
+    }
+}
+
+@media print {
+    .ex2{
+        font-family: 'Times New Roman', Times, serif;
+        background-color: white;
+        border: 1px solid black;
+    }
+}
+
+
+.maket{
+    display: grid;
+    grid-template:  50px auto 50px /300px auto;
+}
+
+.ex3 header{
+    grid-column: 1/3;
+    background-color: bisque;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ex3 nav ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 20%));
+    list-style: none;
+}
+
+
+.ex3 aside{
+    background-color: chartreuse;
+}
+
+.ex3 footer{
+    grid-column: 1/3;
+    background-color: aquamarine;
+}
+
+@media screen and (max-width: 720px) {
+    .maket{
+        grid-template:  50px 50px auto 50px / 1fr;
+    }
+    .ex3 header{
+        grid-column: 1/2;
+        text-align: right;
+    }
+    .ex3 aside ul{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 15%));
+        list-style: none;
+    }
+    
+    .ex3 footer{
+        grid-column: 1/2;
+    }
+
+    .ex3 nav ul {
+        display: none;
+    }
+
+    .ex3 nav:hover ul {
+        display: block;
+        background-color: antiquewhite;
+        position: relative;
+        z-index: 10;
+    }
+
+    .ex3 nav::before {
+        content: "☰";
+    }
+}
