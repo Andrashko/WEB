@@ -1,0 +1,76 @@
+.square{
+    background-color: blue;
+    border: 2px solid black;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+}
+
+
+.ex1:hover, .ex2:hover{
+    background-color: brown;
+}
+
+.ex2{
+    transition-property: background-color;
+    transition-duration: 2s;
+}
+
+.ex3:hover, .ex4:hover{
+    transform: scaleX(2) scaleY(2) rotate(45deg);
+}
+
+.ex4{
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.ex5:hover, .ex6:hover{
+    transform: scaleX(2) scaleY(2) rotate(45deg);
+    background-color: brown;
+}
+
+.ex6{
+    transition-property: transform, background-color;
+    transition-duration: 0.5s;
+}
+
+.ex7:focus{
+    background-color: blue;
+    color: aliceblue;
+}
+
+.ex7{
+    transition-property: color, background-color;
+    transition-duration: 5s;
+}
+
+@keyframes bzz{
+    from{
+        transform: rotate(-45deg);
+    }
+    50%{
+        transform: rotate(45deg);
+    }
+    to{
+        transform: rotate(-45deg);
+    }
+}
+
+.ex8{
+    width: 200px;
+    height: 200px;
+    animation-name: bzz;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes jump {
+    0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+    40%  {transform: translate3d(0,30%,0) scale3d(.7,1.5,1);}
+    100% {transform: translate3d(0,100%,0) scale3d(1.5,.7,1);}
+}
+.jump {
+    animation: jump .5s linear alternate infinite;
+}
