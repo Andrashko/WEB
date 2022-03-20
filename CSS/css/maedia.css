@@ -26,14 +26,26 @@
 }
 
 
-.maket{
+header{
+    background-color: bisque;
+}
+
+aside{
+    background-color: chartreuse;
+}
+
+footer{
+    background-color: aquamarine;
+}
+
+/* Desktop first*/
+.ex3 .maket{
     display: grid;
     grid-template:  50px auto 50px /300px auto;
 }
 
 .ex3 header{
-    grid-column: 1/3;
-    background-color: bisque;
+    grid-column: 1/3;    
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -44,18 +56,12 @@
     list-style: none;
 }
 
-
-.ex3 aside{
-    background-color: chartreuse;
-}
-
 .ex3 footer{
-    grid-column: 1/3;
-    background-color: aquamarine;
+    grid-column: 1/3;    
 }
 
 @media screen and (max-width: 720px) {
-    .maket{
+    .ex3 .maket{
         grid-template:  50px 50px auto 50px / 1fr;
     }
     .ex3 header{
@@ -86,4 +92,80 @@
     .ex3 nav::before {
         content: "☰";
     }
+}
+
+/* mobile first */
+
+
+
+.ex4 .maket{
+    display: grid;
+    grid-template:  50px 50px auto 50px / 1fr;
+}
+.ex4 header{
+    grid-column: 1/2;
+    text-align: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.ex4 aside ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 15%));
+    list-style: none;
+}
+
+.ex4 footer{
+    grid-column: 1/2;
+}
+
+.ex4 nav ul {
+    display: none;
+}
+
+.ex4 nav:hover ul {
+    display: block;
+    background-color: antiquewhite;
+    list-style: none;
+    position: relative;
+    z-index: 10;
+}
+
+.ex4 nav::before {
+    content: "☰";
+}
+
+@media screen and (min-width: 720px) {
+    .ex4 .maket{
+       
+        grid-template:  50px auto 50px /300px auto;
+    }
+    
+    .ex4 header{
+        grid-column: 1/3;
+        text-align: left;
+    }
+    
+    .ex4 nav ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 20%));
+        list-style: none;
+    }
+          
+    .ex4 footer{
+        grid-column: 1/3;
+    }
+
+    .ex4 aside ul{
+        display: block;
+    }
+
+    .ex4 nav:hover ul {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 20%));
+    }
+
+    .ex4 nav::before {
+        display: none;
+    }
+
 }
