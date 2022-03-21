@@ -6,14 +6,13 @@
     display: inline-block;
 }
 
-
 .ex1:hover, .ex2:hover{
     background-color: brown;
 }
-
 .ex2{
     transition-property: background-color;
     transition-duration: 2s;
+    transition-delay: 1s;
 }
 
 .ex3:hover, .ex4:hover{
@@ -22,7 +21,7 @@
 
 .ex4{
     transition-property: transform;
-    transition-duration: 0.5s;
+    transition-duration: s;
 }
 
 .ex5:hover, .ex6:hover{
@@ -30,9 +29,9 @@
     background-color: brown;
 }
 
-.ex6{
+.ex6 {
     transition-property: transform, background-color;
-    transition-duration: 0.5s;
+    transition-duration: 5s;
 }
 
 .ex7:focus{
@@ -48,12 +47,15 @@
 @keyframes bzz{
     from{
         transform: rotate(-45deg);
+        left: 0px;
     }
     50%{
         transform: rotate(45deg);
+        left: 200px;
     }
     to{
         transform: rotate(-45deg);
+        left: 0px;
     }
 }
 
@@ -62,8 +64,9 @@
     height: 200px;
     animation-name: bzz;
     animation-duration: 0.5s;
-    animation-timing-function: ease-in-out;
+    animation-timing-function: linear;
     animation-iteration-count: infinite;
+    position: relative;
 }
 
 @keyframes jump {
@@ -72,5 +75,5 @@
     100% {transform: translate3d(0,100%,0) scale3d(1.5,.7,1);}
 }
 .jump {
-    animation: jump .5s linear alternate infinite;
+    animation: jump 0.5s linear alternate infinite;
 }
