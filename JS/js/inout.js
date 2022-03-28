@@ -10,8 +10,11 @@ Example of input output
 // alert(1);
 // alert(true);
 
-console.log("Text");
-console.log(1);
+// console.log("Text");
+// console.log(1);
+
+document.write("<h2>hello</h2>")
+
 
 //input
 x = prompt("input x", "");
