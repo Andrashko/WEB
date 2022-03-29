@@ -13,11 +13,11 @@ Example of input output
 // console.log("Text");
 // console.log(1);
 
-document.write("<h2>hello</h2>")
+document.write("<h2>hello</h2>");
 
 
 //input
-x = prompt("input x", "");
-console.log(x);//"3"
+// x = prompt("input x", "");
+// console.log(x);//"3"
 
-confirm("Are you shure?");
+// confirm("Are you shure?");
