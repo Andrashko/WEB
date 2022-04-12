@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="./task2.js"></script> -->
+    <script src="./task3.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2> Завдання 3. Доставка товару</h2>
+    <form method="post" action="#">
+        <label for="currency">Вартість товару</label>
+        <input type="number" id="currency" step="0.01" name="currency" value="0" min="0">
+        <fieldset>
+            <legend>Спосіб доставки</legend>
+            <br>
+            <label for="shipping-post">Поштою (50 грн.)</label>
+            <input type="radio" name="shipping" id="shipping-post" value="post">
+            <br>
+            <label for="shipping-post">Новою поштою (70 грн.)</label>
+            <input type="radio" name="shipping" id="shipping-new-post" value="new-post">
+            <br>
+            <label for="shipping-courier">Кур'єром (100 грн.)</label>
+            <input type="radio" name="shipping" id="shipping-courier" value="courier">
+            <br>
+        </fieldset>
+        <label for="emergency"> Термінова доставка (+5% вартості)</label>
+        <input type="checkbox" id="emergency">
+        <br>
+        <button type="button" id="calc-total"> Визначити загальну вартість </button>
+        <br>
+        <label for="total">Загальна вартість</label>
+        <input type="text" id="total">
+    </form>
+</body>
+
+</html>
