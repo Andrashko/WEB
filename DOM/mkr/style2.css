@@ -1,0 +1,18 @@
+table, td, th{
+    border: 1px solid black;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead tr{
+    background-color: blue;
+    color: aliceblue;
+}
+
+tr:nth-child(2n){
+    background-color: darkgrey;
+}

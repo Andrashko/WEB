@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="task3_2.js" defer></script>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <form method="post">
+        <input type="number" name="sum" id="sum" placeholder="Сума кредиту" min="0">
+        <br>
+        <input type="number" name="percent" id="percent" placeholder="відсотки" min="0">
+        <br>
+        <button type="button" id="show-paymnents">
+            Показати графік платежів
+        </button>
+    </form>
+    <table id="payments">
+        <thead> 
+            <tr>
+                <th>номер</th>
+                <th>місяць</th>
+                <th>сума платежу</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</body>
+</html>
