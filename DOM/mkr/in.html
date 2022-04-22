@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="javatest.js" defer></script>
+</head>
+<body>
+    <table border="2">
+        <tr>
+            <td>номер тесту</td>
+            <td>відповіді</td> 
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>2) “75”;</td>
+        </tr>
+        <tr>
+            <td>12</td>
+            <td>1) умовного оператора; </td>
+        </tr><tr>
+            <td>20</td>
+            <td>3) 4;</td>
+        </tr><tr>
+            <td>28</td>
+            <td>3) 1, 15, 2, 305, 36 ; </td>
+        </tr><tr>
+            <td>36</td>
+            <td>1) true; </td>
+        </tr>
+    </table>
+
+    <h2> Завдання 3</h2>
+    <form method="post">
+        <label for="1Number">First number:</label>
+        <input type="number" id="1Number" name="1Number"> <br>
+        <label>Operation: +</label><br>
+        <label for="2Number">Second number:</label>
+        <input type="number" id="2Number" name="2Number"> <br>
+    </form>
+    <form>
+        <br><br>
+        <label for="Answer">Your answer:</label>
+        <input type="number"  id="Answer" name="Answer"> <br>
+        <input type="button" value="Check" id="Check"> <br>
+        <label id="l1">Result:</label>
+    </form>    
+    <p></p>
+    <script>
+        const paragraph = document.querySelector('p');
+let firstNumber = document.getElementById("1Number").value = Math.floor(Math.random() * 10);
+let secondNumber = document.getElementById("2Number").value = Math.floor(Math.random() * 10);
+
+let sum = firstNumber+secondNumber;
+
+document.getElementById("Check").onclick = () => {
+    let answer = parseInt(document.getElementById("Answer").value);
+    if (answer == sum){
+        paragraph.textContent = "Ok";
+    }
+    else{
+        paragraph.textContent = "Nope";
+    }
+}
+
+    </script>    
+</body>
+</html>
