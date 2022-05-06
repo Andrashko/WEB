@@ -70,7 +70,6 @@ class Users {
             throw "Not found";
         this.items.splice(userIndex, 1);
     }
-
 }
 
 // let users = new Users();

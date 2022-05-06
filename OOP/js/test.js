@@ -1,4 +1,5 @@
 let users = new UsersWithDOM();
+
 users.add(
     new UserWithId(
         "User",

@@ -22,3 +22,7 @@ form {
 form input{
     margin-bottom: 10px;
 }
+
+#edit, #add{
+    display: none;
+}
