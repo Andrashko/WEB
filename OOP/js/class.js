@@ -20,7 +20,6 @@ class User {
     }
 
     get password() {
-        console.log("geter");
         return this._password;
     }
 

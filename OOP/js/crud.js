@@ -26,7 +26,7 @@ class Users {
         return this.items.length;
     }
 
-    Add(user) {
+    add(user) {
         if (!(user instanceof UserWithId))
             throw `${user} is not instance of UserWithId`;
         this.items.push(user);
@@ -73,29 +73,29 @@ class Users {
 
 }
 
-let users = new Users();
-users.Add(
-    new UserWithId(
-        "admin",
-        "password",
-        "img.jpg"
-    )
-);
-users.Add(
-    new UserWithId(
-        "user",
-        "password!",
-        "img2.jpg"
-    )
-);
+// let users = new Users();
+// users.Add(
+//     new UserWithId(
+//         "admin",
+//         "password",
+//         "img.jpg"
+//     )
+// );
+// users.Add(
+//     new UserWithId(
+//         "user",
+//         "password!",
+//         "img2.jpg"
+//     )
+// );
 
-let firstUser = users.getById(0);
+// let firstUser = users.getById(0);
 
-users.update(0, {
-    username: "new",
-    password: firstUser.password,
-    image: "newimg.jpg"
-});
+// users.update(0, {
+//     username: "new",
+//     password: firstUser.password,
+//     image: "newimg.jpg"
+// });
 
 // users.Add(
 //     new Object()
