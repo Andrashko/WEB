@@ -4,13 +4,11 @@ Web-програмування
 
 1. Використовуючи js створити:
 a. Об’єкт для зберігання даних про Фото (Id, Автор, Назва, Опис,
-URL-файлу, Список гештегів, Дата опублікування, Кількість
-«лайків»).
+URL-файлу, Список гештегів, Дата опублікування, Кількість «лайків»).
 b. На основі об’єкту фото створити новий об’єкт, який перевизначає
 метод toString()
 c. Об’єкт для зберігання даних про колекції фотографій, цей обєкт
-повинен містити метод для знаходження даних про одне Фото із
-заданим Id.
+повинен містити метод для знаходження даних про одне Фото із заданим Id.
 d. Відобразити дані Фото на сторінці.
 */
 
@@ -24,6 +22,18 @@ class Photo {
         this.hashtags = hashtags;
         this.date = date;
         this.likes = likes;
+    }
+}
+
+// Photo.prototype.toString = ...
+
+class StrgifyPhoto extends Photo {
+    toString() {
+        return `${super.toString()}{
+            id:${this.id},
+            title:${this.title},
+            ...
+        }`;
     }
 }
 
@@ -46,13 +56,20 @@ class PhotoCollection {
 
 
 class PhotoCollectionHtml extends PhotoCollection {
+    constructor(items) {
+        super(items);
+        document.addEventListener("delete", event => {
+            this.delete(event.detail.id);
+            this.mount(this._parrent, this._id);
+        });
+    }
+    
     photoToHTML(photo) {
         if (!photo)
             return ` <p class ="error">Photo with id not found</p>`;
 
         return `   
         <div class="photo">
-
             <h2> ${photo.title} </h2>
             <img src="${photo.url}" alt="${photo.title}">
             <div class="description">
@@ -87,10 +104,6 @@ class PhotoCollectionHtml extends PhotoCollection {
                 )
             );
         }
-        document.addEventListener("delete", event => {
-            this.delete(event.detail.id);
-            this.mount(this._parrent, this._id);
-        });
     }
 }
 
@@ -130,4 +143,4 @@ let kyivPhoto = new Photo(
 let photos = new PhotoCollectionHtml([ukrPhoto, kyivPhoto]);
 
 
-photos.mount(document.getElementById("root"), 2);
+photos.mount(document.getElementById("root"), 1);
