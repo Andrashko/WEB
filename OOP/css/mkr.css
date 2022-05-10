@@ -1,0 +1,23 @@
+.photo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.photo h2{
+    text-align: center;
+}
+
+.description{
+    width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: stretch;
+}
+
+.description p{
+    flex-grow: 1;;
+}
+.photo img{
+    max-width: 700px;
+}
