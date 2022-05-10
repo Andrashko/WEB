@@ -35,13 +35,24 @@ class PhotoCollection {
     getByd(id) {
         return this.items.find(photo => photo.id == id)
     }
+
+    delete(id) {
+        let userIndex = this.items.findIndex(photo => photo.id == id);
+        if (userIndex == -1)
+            throw "Not found";
+        this.items.splice(userIndex, 1);
+    }
 }
 
 
 class PhotoCollectionHtml extends PhotoCollection {
     photoToHTML(photo) {
+        if (!photo)
+            return ` <p class ="error">Photo with id not found</p>`;
+
         return `   
         <div class="photo">
+
             <h2> ${photo.title} </h2>
             <img src="${photo.url}" alt="${photo.title}">
             <div class="description">
@@ -53,12 +64,33 @@ class PhotoCollectionHtml extends PhotoCollection {
             <p>
                 ${photo.description}
             </p>
-        </div>`;
+        </div>
+        <input type="hidden" id="photo-id" value="${photo.id}">
+        <button type="button" id="delete-button">delete</button>`;
     }
 
 
     mount(parrent, id) {
+        this._parrent = parrent;
+        this._id = id;
         parrent.innerHTML = this.photoToHTML(this.getByd(id));
+        document.getElementById("delete-button").onclick = function () {
+            let id = parseInt(document.getElementById("photo-id").value);
+            document.dispatchEvent(
+                new CustomEvent(
+                    "delete",
+                    {
+                        detail: {
+                            id
+                        }
+                    }
+                )
+            );
+        }
+        document.addEventListener("delete", event => {
+            this.delete(event.detail.id);
+            this.mount(this._parrent, this._id);
+        });
     }
 }
 
@@ -98,4 +130,4 @@ let kyivPhoto = new Photo(
 let photos = new PhotoCollectionHtml([ukrPhoto, kyivPhoto]);
 
 
-photos.mount(document.getElementById("root"), 1);
+photos.mount(document.getElementById("root"), 2);
